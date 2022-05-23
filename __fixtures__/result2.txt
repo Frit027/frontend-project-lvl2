@@ -1,0 +1,10 @@
+{
+  - age: 21
+  + age: 34
+  - city: Moscow
+  + city: Tver
+  - mail: frit@mail.ru
+  + mail: man@gmail.com
+  - name: Ilya
+  + name: Ivan
+}

@@ -1,0 +1,8 @@
+{
+  - google: 10
+  + microsoft edge: 1
+  - mozilla: 8
+  + opera: 6
+  + safari: 8
+  - yandex: 7
+}
