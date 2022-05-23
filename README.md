@@ -8,3 +8,4 @@
 
 ## Примеры работы
 1. Сравнение плоских JSON-файлов: [видео](https://drive.google.com/file/d/1y1FEtltsx2kB6CgpXVuUWtVYRGy4S-4m/view?usp=sharing).
+2. Сравнение плоских YAML-файлов: [видео](https://drive.google.com/file/d/1h0g_vsRtFtyt0ju_x2ffCwhjQ2d2Xhu2/view?usp=sharing).
