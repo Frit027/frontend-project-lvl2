@@ -1,8 +1,8 @@
 {
-  - google: 10
-  + microsoft edge: 1
-  - mozilla: 8
-  + opera: 6
-  + safari: 8
-  - yandex: 7
+  - follow: false
+    host: hexlet.io
+  - proxy: 123.234.53.22
+  - timeout: 50
+  + timeout: 20
+  + verbose: true
 }

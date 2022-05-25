@@ -1,5 +1,5 @@
 {
-  "safari": 8,
-  "opera": 6,
-  "microsoft edge": 1
+  "timeout": 20,
+  "verbose": true,
+  "host": "hexlet.io"
 }
