@@ -2,13 +2,16 @@ import plain from './plain.js';
 import json from './json.js';
 import stylish from './stylish.js';
 
-export default (format, diff) => {
-  switch (format) {
-    case 'plain':
-      return plain(diff);
-    case 'json':
-      return json(diff);
-    default:
-      return stylish(diff);
-  }
+const getFormatter = (format) => {
+  const formats = { stylish, plain, json };
+
+  if (format === 'stylish') return formats.stylish;
+  if (format === 'plain') return formats.plain;
+  if (format === 'json') return formats.json;
+  throw new TypeError(`Формата ${format} не существует.`);
+};
+
+export default (diff, format) => {
+  const formatter = getFormatter(format);
+  return formatter(diff);
 };
