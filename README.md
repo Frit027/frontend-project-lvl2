@@ -1,4 +1,3 @@
-### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Frit027/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/Frit027/frontend-project-lvl2/actions/workflows/hexlet-check.yml)
 [![Actions Status](https://github.com/Frit027/frontend-project-lvl2/workflows/lint-tests/badge.svg)](https://github.com/Frit027/frontend-project-lvl2/actions/workflows/lint-tests.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d5aed474be26478d740e/maintainability)](https://codeclimate.com/github/Frit027/frontend-project-lvl2/maintainability)
