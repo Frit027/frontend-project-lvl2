@@ -4,7 +4,7 @@ import formatter from './formatters/index.js';
 
 export default (file1, file2, format = 'stylish') => {
   const diffBuilder = (data1, data2) => {
-    const keys = _.uniq([..._.keys(data1), ..._.keys(data2)]).sort();
+    const keys = _.sortBy(_.uniq([..._.keys(data1), ..._.keys(data2)]));
 
     return keys.map((key) => {
       if (!_.has(data1, key)) return { key, action: 'added', value: data2[key] };
