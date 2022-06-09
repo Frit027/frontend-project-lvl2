@@ -14,26 +14,20 @@ const getDiff = (diff, arrKeys = []) => {
     } = node;
 
     arrKeys.push(key);
-
-    let keys;
-    if (action !== 'children') {
-      keys = arrKeys.join('.');
-      arrKeys.pop();
-    }
+    const keys = arrKeys.concat();
+    arrKeys.pop();
 
     switch (action) {
       case 'added':
-        return `Property '${keys}' was added with value: ${getValue(value)}`;
+        return `Property '${keys.join('.')}' was added with value: ${getValue(value)}`;
       case 'deleted':
-        return `Property '${keys}' was removed`;
+        return `Property '${keys.join('.')}' was removed`;
       case 'changed':
-        return `Property '${keys}' was updated. From ${getValue(oldValue)} to ${getValue(newValue)}`;
+        return `Property '${keys.join('.')}' was updated. From ${getValue(oldValue)} to ${getValue(newValue)}`;
       case 'unchanged':
         return '';
       case 'children': {
-        const innerArr = getDiff(value, arrKeys);
-        arrKeys.pop();
-        return innerArr;
+        return getDiff(value, keys);
       }
       default:
         throw new TypeError('Неопознанное действие.');
