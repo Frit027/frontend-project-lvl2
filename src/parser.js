@@ -1,6 +1,6 @@
 import yaml from 'js-yaml';
 import path from 'path';
-import { readFile } from './utilities.js';
+import readFile from './utilities.js';
 
 export default (filename) => {
   const data = readFile(filename);

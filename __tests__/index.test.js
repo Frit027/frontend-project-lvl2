@@ -1,6 +1,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { readFile } from '../src/utilities.js';
+import readFile from '../src/utilities.js';
 import genDiff from '../src/index.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
