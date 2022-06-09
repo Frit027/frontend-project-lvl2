@@ -16,6 +16,10 @@ const plainData = {
   'result4.txt': [['file1.json', 'file2.json'], ['file1.yml', 'file2.yaml']],
 };
 
+const jsonData = {
+  'result5.txt': [['file1.json', 'file2.json'], ['file1.yml', 'file2.yaml']],
+};
+
 const compare = (data, format = 'stylish') => {
   Object.keys(data).forEach((txtFile) => {
     const result = readFile(getFixturePath(txtFile)).replace(/\r\n/g, '\n');
@@ -38,4 +42,9 @@ test('Stylish', () => {
 // eslint-disable-next-line
 test('Plain', () => {
   compare(plainData, 'plain');
+});
+
+// eslint-disable-next-line
+test('JSON', () => {
+  compare(jsonData, 'json');
 });
