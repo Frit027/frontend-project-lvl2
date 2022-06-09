@@ -13,10 +13,7 @@ const getDiff = (diff, arrKeys = []) => {
       key, action, value, oldValue, newValue,
     } = node;
 
-    arrKeys.push(key);
-    const keys = arrKeys.concat();
-    arrKeys.pop();
-
+    const keys = _.concat(arrKeys, [key]);
     switch (action) {
       case 'added':
         return `Property '${keys.join('.')}' was added with value: ${getValue(value)}`;
