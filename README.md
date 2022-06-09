@@ -11,3 +11,4 @@
 2. Сравнение плоских YAML-файлов: [видео](https://drive.google.com/file/d/1h0g_vsRtFtyt0ju_x2ffCwhjQ2d2Xhu2/view?usp=sharing).
 3. Рекурсивное сравнение: [видео](https://drive.google.com/file/d/1ppRVwG776SzpGuM9wXZVnqSzqNHJVgtX/view?usp=sharing).
 4. Плоский формат: [видео](https://drive.google.com/file/d/1nTeJpuq9cdCFweWWcFomJUHQgoagI3lk/view?usp=sharing).
+5. Вывод в json: [видео](https://drive.google.com/file/d/19a_Z-gnRGxZhtxUe4dkInwB0chgVXxOI/view?usp=sharing).
