@@ -1,5 +1,6 @@
-const REPLACER = ' ';
+import _ from 'lodash';
 
+const REPLACER = ' ';
 const getIndent = (str, sign) => str.replace(/.(?=.$)/, sign);
 const getLine = (key, value, count, sign = ' ') => `${getIndent(REPLACER.repeat(count), sign)}${key}: ${value}`;
 const getTree = (arr, count) => `{\n${arr.join('\n')}\n${REPLACER.repeat(count)}}`;
@@ -8,10 +9,12 @@ const getDiff = (diff, count = 4) => {
   const spacesCount = 4;
 
   const getStr = (data, innerCount = 4) => {
-    if (typeof data !== 'object' || !data) return data;
+    if (!_.isObject(data)) return data;
 
-    const arr = Object.keys(data).map((key) => {
-      if (typeof data[key] !== 'object' || !data[key]) return getLine(key, data[key], count + innerCount);
+    const arr = _.keys(data).map((key) => {
+      if (!_.isObject(data[key])) {
+        return getLine(key, data[key], count + innerCount);
+      }
       return getLine(key, getStr(data[key], count + innerCount), count + innerCount);
     });
     return getTree(arr, innerCount - spacesCount + count);
